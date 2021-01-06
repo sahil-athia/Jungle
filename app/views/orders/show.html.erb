@@ -9,7 +9,7 @@
     <h4>Thank you for your order!</h4>
     <h4>Total cost: <%= humanized_money_with_symbol @order.total_cents / 100 %> </h4>
     <h4>Email used: <%= @order.email %> </h4>
-
+    <h4>Product(s) purchased:</h4>
     <table>
     <thead>
         <tr>
@@ -17,6 +17,7 @@
           <th>Unit Price</th>
           <th>Quantity</th>
           <th>Price</th>
+          <th></th>
         </tr>
       </thead>
     <tbody>

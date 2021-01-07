@@ -1,6 +1,13 @@
-<h1> Categories </h1>
+<h1> All Categories </h1>
 <div class="well">
     <%= link_to '+ New Category', new_admin_category_path, class: 'btn btn-info' %>
   </div>
-  
-<%= @categories.inspect %>
+
+  <table class="table table-bordered">
+    <tr>
+      <th><h3>Category Name</h3></th>
+    </tr>
+    <% @categories.each do |category| %>
+        <%= render category, category: category%>
+    <% end %>
+</table>

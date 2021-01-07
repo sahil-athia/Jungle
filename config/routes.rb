@@ -18,6 +18,14 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :new, :create]
   end
 
+  # Example of regular route: (currently for the about page)
+  get 'about' => 'about#show'
+
+  # generate user login page, log users in and log them out
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
   # user authentication pages
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
@@ -28,8 +36,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   
-  # Example of regular route:
-  get 'about' => 'about#show'
+  
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

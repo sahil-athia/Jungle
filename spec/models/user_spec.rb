@@ -15,7 +15,9 @@ RSpec.describe User, type: :model do
 
     it "should not pass if emails are not unique" do
       @user1 = User.new({:password => "hell0", :password_confirmation => "hell0", :email => "hello@world.com", :first_name => "bob", :last_name => "jones"})
+      @user1.save
       @user2 = User.new({:password => "world", :password_confirmation => "world", :email => "HeLLO@WorLd.com", :first_name => "jack", :last_name => "jones"})
+      expect(@user1.save).to eq(true)
       expect(@user2.save).to eq(false)
     end
 

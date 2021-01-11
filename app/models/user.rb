@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   private
 
   def downcase_email
-    self.email = email.downcase if !email.present?
+    self.email = email.downcase if email.present?
   end
 
   def check_password_is_equal

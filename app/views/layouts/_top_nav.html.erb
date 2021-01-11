@@ -29,8 +29,12 @@
           <%= link_to 'About Us', about_path %>
         </li>
         <% if current_user %>
-          <li>Signed in as <%= current_user.first_name %></li>  
           <li><%= link_to "Logout", '/logout' %></li>
+          <li>
+            <a class="nav-link disabled" tabindex="-1" aria-disabled="true">
+              Signed in as <%= current_user.first_name %>
+            </a>
+          </li>  
         <% else %>
           <li><%= link_to 'Login', '/login' %></li>  
           <li><%= link_to 'Signup', '/signup' %></li>

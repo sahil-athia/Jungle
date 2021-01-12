@@ -10,6 +10,7 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
       @category.products.create!(
         name:  Faker::Hipster.sentence(3),
         description: Faker::Hipster.paragraph(4),
+        image: open_asset('apparel1.jpg'),
         quantity: 10,
         price: 64.99
       )
@@ -21,7 +22,7 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     visit root_path
 
     # DEBUG / VERIFY
-    save_screenshot
+    save_screenshot("products_page.png")
 
     expect(page).to have_css 'article.product', count: 10
     # there sould be 10 since we are loading 10 products in the "before"

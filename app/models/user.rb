@@ -23,4 +23,14 @@ class User < ActiveRecord::Base
   def check_password_is_equal
     errors.add(:password, "passwords must match") if password_confirmation != password
   end
+
+  def self.authenticate_with_credentials(login_email, login_password)
+    user = User.find_by_email(login_email.downcase.strip)
+
+    if user && user.authenticate(login_password)
+      user
+    else 
+      nil
+    end
+  end
 end

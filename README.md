@@ -12,15 +12,15 @@ Jungle is a mini e-commerce application built with Ruby-on-Rails.
 
 ***Home Page***
 
-!["Home Page"]()
+!["Home Page"](https://github.com/sahil-athia/Jungle/blob/master/docs/home-page.png?raw=true)
 
 ***Product Details***
 
-!["Product Details"]()
+!["Product Details"](https://github.com/sahil-athia/Jungle/blob/master/docs/product-details-page.png?raw=true)
 
 ***Cart***
 
-!["Cart"]()
+!["Cart"](https://github.com/sahil-athia/Jungle/blob/master/docs/cart.png?raw=true)
 
 ## Setup
 

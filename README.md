@@ -1,7 +1,26 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+Jungle is a mini e-commerce application built with Ruby-on-Rails. 
 
+## Technical Specifications
++ Ruby
++ Rails
++ PostgreSQL
++ Capybara
+
+## Final Product
+
+***Home Page***
+
+!["Home Page"]()
+
+***Product Details***
+
+!["Product Details"]()
+
+***Cart***
+
+!["Cart"]()
 
 ## Setup
 
